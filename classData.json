@@ -1,0 +1,51 @@
+{
+    "classes": [
+        {
+            "id": 0,
+            "classAbout": "addition",
+            "className": "Addition",
+            "symbol": "+",
+            "info": "In this lesson, You will learn how to ADD numbers."
+        }
+        ,
+        {
+            "id": 1,
+            "classAbout": "subtraction",
+            "className": "Subtraction",
+            "symbol": "-",
+            "info": "In this lesson, You will learn how to SUBTRACT numbers."
+        }
+        ,
+        {
+            "id": 2,
+            "classAbout": "multiplication",
+            "className": "Multiplication",
+            "symbol": "*",
+            "info":"In this lesson, You will learn how to MULTIPLY numbers."
+        }
+        ,
+        {
+            "id": 3,
+            "classAbout": "division",
+            "className": "Division",
+            "symbol": "/",
+            "info": "In this lesson, You will learn how to DIVIDE numbers."
+        }
+        ,
+        {
+            "id": 4,
+            "classAbout": "order of operations",
+            "className": "Order of Operations",
+            "symbol": "-",
+            "info": "In this lesson, You will learn which operations go first! PEMDAS: Parentheses, Exponent, Multiplication, Disivision, Addition, Subtraction."
+        }
+        ,
+        {
+            "id": 6,
+            "classAbout": "asddsdsds",
+            "className": "Order of Operations",
+            "symbol": "-",
+            "info": "In this lesson, You will learn which operations go first! PEMDAS: Parentheses, Exponent, Multiplication, Disivision, Addition, Subtraction."
+        }
+    ]
+}
