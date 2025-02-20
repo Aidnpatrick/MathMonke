@@ -3,3 +3,8 @@
     width: 100%;
     
 }
+
+.flex-row-actual {
+    display: flex;
+    flex-direction: row;
+}

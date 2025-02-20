@@ -83,6 +83,26 @@ body {
     
 }
 
+
+.stats-button {
+    background: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    height: 60px;
+    width: 90px;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    gap: 2px;
+    margin-inline: 10px;
+}
+
+.stats-button img {
+    width: 25px;
+
+}
 .column {
     display: flex;
     flex-direction: column;
@@ -146,7 +166,6 @@ body {
     position: absolute;
     left: 15px;
 }
-
 
 
 
