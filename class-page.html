@@ -9,20 +9,24 @@
 </head>
 <body>
     <div class="flex-row">
-        <div class="column" style="width: 60%">
-
+        <div class="column" style="width: 50%" id="content">
+            <h1 class="logo-heading">MathMonke</h1>
+            <iframe src="lesson-page.html" style="width: 100%; height: 100%; border: none;"></iframe>
         </div>
-        <div class="column" style="width: 40%;">
-        
+
+        <button class="showBar" onclick="showSideBar()" id="barButton"><</button>
+        <div class="column" style="width: 430px; position: fixed; right: 0; z-index: 1000; background-color: white;" id="sideBar">
+            <br>
+            <div class="stats">
+
+            </div>
+            <br>
             <div class="class-library" id="classesDiv">
-                <h2>Lessons</h2>
+                <h2 class="sub-heading">Lessons 🧑‍🏫</h2>
+                <br><br><br>
             </div>
-            <div class="disc">
-                <h2>Discription</h2>
-                <div style="padding: 20px; display: flex; flex-direction: column; text-align: center;">
-                    <p style="font-size: 20px;" id="discText"></p>
-                </div>
-            </div>
+
+            
         </div>
     </div>
 </body>

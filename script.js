@@ -5,17 +5,15 @@ document.addEventListener("DOMContentLoaded", function () {
         .then(response => response.json())
         .then(data => {
             const classesParent = document.getElementById("classesDiv");
-            const classId = localStorage.getItem("classId"); // Retrieve classId from localStorage
+            const classId = localStorage.getItem("classId"); 
 
             data.classes.forEach((classItem) => {
                 console.log(classItem.classAbout);
                 
-                // Create a container for each class
                 const divClassChild = document.createElement("div");
                 divClassChild.className = "class-div";
 
-                // Hover effect (mouseenter instead of hover)
-                divClassChild.addEventListener("mouseenter", () => {
+                divClassChild.addEventListener("click", () => {
                     discChange(classItem.id);
                 });
 
@@ -27,6 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 button.addEventListener("click", () => {
                     localStorage.setItem("classId", classItem.id);
+                    startLesson();
                 });
 
                 // Title
@@ -35,8 +34,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 title.textContent = classItem.className;
 
                 const br = document.createElement("br");
+                br.style.height = "5px";
 
-                // Append elements
                 divClassChild.appendChild(title);
                 divClassChild.appendChild(button);
                 classesParent.appendChild(divClassChild);
@@ -46,7 +45,6 @@ document.addEventListener("DOMContentLoaded", function () {
         .catch(error => console.error("Error loading JSON:", error));
 });
 
-// Function to update description
 function discChange(id) {
     const filePath = 'classData.json';
 
@@ -64,3 +62,37 @@ function discChange(id) {
         })
         .catch(error => console.error("Error loading JSON:", error));
 }
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const p = document.getElementById("discText");
+    const placeHolder = document.getElementById("placeHolderDisc");
+
+    if (p.textContent.trim() === "") { 
+        placeHolder.textContent = "[Click a lesson to see its description]";
+    } else {
+        placeHolder.textContent = "";
+    }
+});
+
+function showSideBar() {
+    const column = document.getElementById("sideBar");
+    const button = document.getElementById("barButton");
+    const content = document.getElementById("content");
+    // Get computed style to check actual display value
+    const columnStyle = window.getComputedStyle(column).display;
+
+    if (columnStyle === "flex") {
+        column.style.display = "none";
+        button.style.right = "0%";
+        content.style.width = "100%";
+    } else {
+        column.style.display = "flex";  // Fixed typo
+        button.style.right = "430px";
+        content.style.width = "50%";
+    }
+}
+
+
+
+
