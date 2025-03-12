@@ -19,13 +19,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 // Start button
                 const button = document.createElement("a");
-                button.href = "lesson-page.html";
                 button.className = "classButton";
                 button.textContent = "START";
 
                 button.addEventListener("click", () => {
                     localStorage.setItem("classId", classItem.id);
-                    startLesson();
+                    newQuestion();
+                    localStorage.setItem("questions", 0);
                 });
 
                 // Title
@@ -85,14 +85,8 @@ function showSideBar() {
     if (columnStyle === "flex") {
         column.style.display = "none";
         button.style.right = "0%";
-        content.style.width = "100%";
     } else {
         column.style.display = "flex";  // Fixed typo
         button.style.right = "430px";
-        content.style.width = "50%";
     }
 }
-
-
-
-

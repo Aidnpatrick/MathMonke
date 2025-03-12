@@ -1,10 +1,115 @@
-.content {
-    background-color: grey;
-    width: 100%;
-    
+.lesson-content, .help-content {
+
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+
+  
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 15px rgba(61, 61, 61, 0.3);
+  width: 80%;
+  padding: 20px;
+  border-radius: 10px;
+  height: 400px;
+  max-width: 700px;
+
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0s linear 0.3s;
+
+  position: fixed;
+  top: 315px;
+  left: 400px;
+
+
+}
+.lesson-content {
+  visibility: hidden;
+
 }
 
-.flex-row-actual {
+
+.help-content {
+  position: fixed;
+  position: absolute;
+  left: 850px;
+  top: 320px;
+}
+
+.lesson-content.show {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0s;
+}
+
+.help-content.show {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0s;
+}
+.flex-row-actual, .question {
     display: flex;
     flex-direction: row;
+}
+
+.right-or-wrong {
+}
+
+.question {
+  font-size: 25px;
+}
+.user-input {
+  border-radius: 10px;
+  border: 3px solid rgba(0, 0, 0, 0.3);
+  font-size: 20px;
+  height: 40px;
+  font-family: 'Trebuchet MS', sans-serif;
+}
+.user-input:focus {
+  border: 3px solid rgba(61, 61, 61, 0.3);
+}
+
+.check-button, .help-button {
+  position: absolute;
+
+  bottom: 10px;
+  height: 50px;
+
+  border-radius: 10px;
+  border: none;
+  font-size: 20px;
+  
+  /*background-color: rgb(63, 218, 63);*/
+
+  text-decoration: none;
+  color: white;
+  font-weight: bolder;
+  font-family: 'Trebuchet MS', sans-serif;
+  transition: background, transform 0.3s ease;
+
+
+}
+.check-button:hover {
+  background-color: rgb(44, 174, 255);
+  transform: scale(1.1, 1.1);
+}
+.check-button {
+  width: 150px;
+  background-color: rgb(82, 189, 255);
+  right: 10px;
+}
+.help-button {
+  width: 90px;
+  background-color: rgba(7, 223, 0, 0.747);
+  right: 170px;
+}
+.help-button:hover {
+  background-color: rgba(6, 177, 0, 0.747);
+  transform: scale(1.1, 1.1);
+}
+
+.questions {
+  position: absolute;
+
+  right: 25px;
+
 }

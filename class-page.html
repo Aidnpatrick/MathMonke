@@ -5,31 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="lesson-page.css">
     <script src="script.js"></script>
+    <script src="lesson.js"></script>
 </head>
 <body>
+    <nav class="nav">
+        <h1 class="logo-heading">MathMonke🐵</h1>
+        
+
+        <div class="stats">
+            <button class="stats-button">
+                <img src="icons/bolt-solid.svg">
+                19202
+            </button>
+        </div>
+
+    </nav>
+     
     <div class="flex-row">
-        <div class="column" style="width: 50%" id="content">
-            <h1 class="logo-heading">MathMonke</h1>
-            <iframe src="lesson-page.html" style="width: 100%; height: 100%; border: none;"></iframe>
+        <div class="column" style="width: 100%; justify-content: center; position: relative; align-items: center;" id="content">
+
+            <div id="generalContent">
+
+            </div>
+            <div class="lesson-content" id="lessonContent">
+                <h2 class="questions">1/5</h2>
+                <h2 style="text-decoration: underline;">Addition</h2>
+                <h3>Solve the following equation:</h3>
+                
+
+                    <div class="question" id="questionDiv"></div>
+                    <input class="user-input" id="userInput" placeholder="Enter the Answer!">
+                <button class="help-button" id="helpButton">Help</button>
+                <button class="check-button" id="checkButton" onclick="checkQuestion()">Check</button>
+
+                    
+            </div>
+            <div class="help-content" id="helpContent">
+                skibidi
+            </div>            
         </div>
 
         <button class="showBar" onclick="showSideBar()" id="barButton"><</button>
-        <div class="column" style="width: 430px; position: fixed; right: 0; z-index: 1000; background-color: white;" id="sideBar">
-            <br>
-            <div class="stats">
-                <button class="stats-button">
-                    <img src="icons/bolt-solid.svg">
-                    19202
-                </button>
-            </div>
+        <div class="sidebar" style="width: 430px; position: fixed; right: 0; z-index: 1000; background-color: white;display: none;" id="sideBar">
             <br>
             <div class="class-library" id="classesDiv">
                 <h2 class="sub-heading">Lessons 🧑‍🏫</h2>
                 <br><br><br>
             </div>
 
-            
         </div>
     </div>
 </body>
